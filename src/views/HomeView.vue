@@ -1,18 +1,22 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div>页面跳转</div>
+    <div @click="gotopage('work')">gotoWork</div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'HomeView',
-  components: {
-    HelloWorld
+  data () {
+    return {}
+  },
+  methods: {
+    gotopage (routerVal) {
+      // routerVal = 跳转的路由
+      this.$router.push(routerVal)
+    }
   }
 }
 </script>
